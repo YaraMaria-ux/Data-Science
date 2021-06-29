@@ -1,18 +1,15 @@
-# Data-Science
-<img src="https://www.northeastern.edu/graduate/blog/wp-content/uploads/2020/06/iStock-1221293664-1.jpg" alt="image"/>
+<img  src="https://user-images.githubusercontent.com/82841749/123869617-9bfd4f80-d907-11eb-9683-aa464e4db55d.png" alt="image"/>
 
-## As informações que vão alimentar nossa análise, foram extraídas  do site Kaggle link Os dados são referentes a clientes serviços  de telecomunicações e seus hábitos de consumo, produtos, etc
-### Analise de dados, tratamentos de dados grafico em python tabelas(DataFrames)
+- As informações que vão alimentar nossa análise, foram extraídas  do site Kaggle link Os dados são referentes a clientes serviços  de telecomunicações e seus hábitos de consumo, produtos, etc
+- Analise de dados, tratamentos de dados grafico em python tabelas(DataFrames)
 
-### Machine learning e pyplot no jupyter notbook
-
-# passo 1: Importa a base de dados
-#### Inportando a biblioteca pandas 
+## passo 1: Importa a base de dados
+### Inportando a biblioteca pandas 
 - import pandas as pd
-#### Lendo os dados e salvando na variavel tabela
+### Lendo os dados e salvando na variavel tabela
 - tabela = pd.read_csv("Dados/telecom_users.csv")
 
-# passo 2: Vizualizar a base de dados 
+## passo 2: Vizualizar a base de dados 
 - display(tabela)
 
 				Unnamed: 0	IDCliente	Genero	Aposentado	Casado	Dependentes	MesesComoCliente	ServicoTelefone	MultiplasLinhas	ServicoInternet	ServicoSegurancaOnline	ServicoBackupOnline	ProtecaoEquipamento	ServicoSuporteTecnico	ServicoStreamingTV	ServicoFilmes	TipoContrato	FaturaDigital	FormaPagamento	ValorMensal	TotalGasto	Churn	Codigo
@@ -29,25 +26,29 @@
 		5985	860	4795-UXVCJ	Masculino	0	Nao	Nao	26	Sim	Nao	Nao	SemInternet	SemInternet	SemInternet	SemInternet	SemInternet	SemInternet	Anual	Nao	CartaoCredito	19.80	457.3	Nao	NaN
 		5986 rows × 23 columns
 
-# passo 3: Coluna unnamed é inutil 
-- Dropando a coluna Unannamed 0, (axis=1) exclui todas as linhas da coluna.
-#### Dropando a coluna Unannamed 0, (axis=1) exclui todas as linhas da coluna.
-
-- tabela = tabela.drop("Unnamed: 0", axis=1)  
+## passo 3: Coluna unnamed é inutil 
+### Saber separar o que é útil do que não é, é fundamental para uma boa análise de dados
+- tabela = tabela.drop(["Unnamed: 0"], axis=1)  
 - display(tabela)
+### Qual dos eixos deve ser excluído, 0 ou ‘index será apagada a linha indicada; 1 ou ‘columns será apagada a coluna indicada
 
-# passo 4: como esta os nossos cancelamentos
-#### Contando o total de cancelamento
+## passo 4: como esta os nossos cancelamentos
+
+### Contando o total de cancelamento
+
+-A primeira análise que iremos realizar é de caráter exploratório Entender quantos de fato cancelaram o contrato e quantos ainda estão ativos Para isso, usaremos a coluna Churn do nosso dataframe O conceito de Churn em poucas palavras e simplificando o entendimento é o número de clientes que cancelaram o serviço prestado pela empresa Para isso, usaremos um novo método do pandas
+value_counts ()(documentação)
+
 - display(tabela["Churn"].value_counts())
-	Nao    4398
-	Sim    1587
-	Name: Churn, dtype: int64
-
+	
 		Nao    4398
 		Sim    1587
-		Name: Churn, dtype: int64		
+		Name: Churn, dtype: int64
+		Nao    0.734349
+		Sim    0.265651
+		Name: Churn, dtype: float64		
 
-#### em percentual
+## em percentual
 - display(tabela["Churn"].value_counts(normalize=True).map("{:.1%}".format))
 
 	    Nao    4387
