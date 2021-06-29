@@ -1,5 +1,5 @@
 # Data-Science
-<img src="https://github.com/victor-0324/Analise_Dados_Telecom/blob/main/Graficos%20do%20projeto/datascience-docu.jpg?raw=true" alt="image" />
+<img src="https://www.northeastern.edu/graduate/blog/wp-content/uploads/2020/06/iStock-1221293664-1.jpg" alt="image"/>
 
 ## As informações que vão alimentar nossa análise, foram extraídas  do site Kaggle link Os dados são referentes a clientes serviços  de telecomunicações e seus hábitos de consumo, produtos, etc
 ### Analise de dados, tratamentos de dados grafico em python tabelas(DataFrames)
@@ -77,10 +77,7 @@
 ### faturas digitais
 <img height="150" src="https://github.com/victor-0324/Analise_Dados_Telecom/blob/main/Graficos%20do%20projeto/newplot%20(15).png?raw=true"/>
 
-#### Análise
-- Os métodos automáticos tem uma taxa de churn menor 
-#### Insights
-- O Eletronic Check possui resultado muito ruim Se possível evitar Ideia oferecer benefícios caso a pessoa escolha um método automático
+### Forma De Pagamento
 <img height="150" src="https://github.com/victor-0324/Analise_Dados_Telecom/blob/main/Graficos%20do%20projeto/newplot%20(16).png?raw=true"/>
 
 ### Total de gastos
@@ -89,37 +86,21 @@
 ### Cancelamentos
 <img height="150" src="https://github.com/victor-0324/Analise_Dados_Telecom/blob/main/Graficos%20do%20projeto/newplot%20(19).png?raw=true"/>
 
-#### Análise 
-- Proporção de Cancelamento Alta para valores de Tenure baixo 
-#### Insights 
-- Baixa qualidade no atendimento do pós venda 1 ª experiência com o cliente não é boa Captação de clientes falha  clientes desqualificados expectativas erradas ao adquirir o produto
+### Meses Como Cliente 
 <img height="150" src="https://github.com/victor-0324/Analise_Dados_Telecom/blob/main/Graficos%20do%20projeto/newplot%20(5).png?raw=true"/>
 
-#### Análise
-- Clientes que NÃO possuem serviços adicionais de Suporte Técnico, Proteção a dispositivos e Segurança Online tendem a cancelar mais
-<img height="150" src="https://github.com/victor-0324/Analise_Dados_Telecom/blob/main/Graficos%20do%20projeto/newplot%20(8).png?raw=true"/>
-<img height="150" src="https://github.com/victor-0324/Analise_Dados_Telecom/blob/main/Graficos%20do%20projeto/newplot%20(9).png?raw=true"/>
-
-### Insights
-
-- Todos os itens em algum nível falam sobre aumentar a confiabilidade/disponibilidade do serviço recebido pelo cliente
-<img height="150" src="https://github.com/victor-0324/Analise_Dados_Telecom/blob/main/Graficos%20do%20projeto/newplot%20(10).png?raw=true"/>
-
-#### Análise
-- Clientes que NÃO possuem serviços adicionais de Suporte Técnico, Proteção a dispositivos e Segurança Online tendem a cancelar mais
+### Serviço Internet
 <img height="150" src="https://github.com/victor-0324/Analise_Dados_Telecom/blob/main/Graficos%20do%20projeto/newplot%20(8).png?raw=true"/>
 
+### Serviço Segurança Online
 <img height="150" src="https://github.com/victor-0324/Analise_Dados_Telecom/blob/main/Graficos%20do%20projeto/newplot%20(9).png?raw=true"/>
 
-### Insights
-- Todos os itens em algum nível falam sobre aumentar a confiabilidade/disponibilidade do serviço recebido pelo cliente
+### Serviço Backup Online 
 <img height="150" src="https://github.com/victor-0324/Analise_Dados_Telecom/blob/main/Graficos%20do%20projeto/newplot%20(10).png?raw=true"/>
 
-#### Análise
-- Contrato Mensal com taxa de cancelamento MUITO superior aos demais métodos de pagamento
-#### Insights
-- Melhorar as condições comerciais dos planos anuais para direcionar a pessoa para estes casos
+### Tipo de Contrato 
 <img height="150" src="https://github.com/victor-0324/Analise_Dados_Telecom/blob/main/Graficos%20do%20projeto/newplot%20(14).png?raw=true"/> 
+
 
 # 
 -
