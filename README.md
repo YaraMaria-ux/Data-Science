@@ -60,7 +60,9 @@
 - coerce, indica que em caso de erro, o valor a ser considerado na transformação será NaN
 ### Agora precisamos remover a coluna Código que apresentou apenas valores Vazios
  - tabela = df.dropna(how="all , axis=1
+  
 ![image](https://user-images.githubusercontent.com/82841749/123965330-b6c4d800-d98a-11eb-83de-5ee2ca06f6d6.png)
+
 ### Coluna ‘Código’ Removida
 - Assim como no caso anterior, o método dropna possui 2 argumentos que precisam ser fornecidos para que a exclusão possa acontecer
 
