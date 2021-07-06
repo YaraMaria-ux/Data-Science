@@ -3,7 +3,7 @@
 - As informações que vão alimentar nossa análise, foram extraídas  do site Kaggle link Os dados são referentes a clientes serviços  de telecomunicações e seus hábitos de consumo, produtos, etc
 - Analise de dados, tratamentos de dados grafico em python tabelas(DataFrames)
 
-##  1 - Importa a base de dados
+##  1 - Importando e visualizando os dados
 ### Inportando a biblioteca pandas 
 - import pandas as pd
 ### Lendo os dados e salvando na variavel tabela
@@ -28,42 +28,45 @@
 
 ## 2- Excluir colunas inuteis 
 ### A coluna Unnamed:0 não nos é relevante. Podemos retirá la de nossa base para aumentar a eficiência do código.
-
-- tabela = tabela.drop(["Unnamed: 0"], axis=1).............> Coluna Unnamed:0 retirada <
+- Para retirarmos a coluna Unnamed 0 vamos usar o método abaixo
+- tabela = tabela.drop(["Unnamed: 0"], axis=1)
 - display(tabela) 
 
-![image](https://user-images.githubusercontent.com/82841749/123961195-7a8f7880-d986-11eb-8ee6-ee2b3ade2d72.png) ![image](https://user-images.githubusercontent.com/82841749/123961290-91ce6600-d986-11eb-8b54-17d4a80bcd26.png)
-
+![image](https://user-images.githubusercontent.com/82841749/123961195-7a8f7880-d986-11eb-8ee6-ee2b3ade2d72.png) ----
+![image](https://user-images.githubusercontent.com/82841749/123961290-91ce6600-d986-11eb-8b54-17d4a80bcd26.png)
+Coluna Unnamed:0 retirada
 
 - Saber separar o que é útil do que não é, é fundamental para uma boa análise de dados
 
 - Qual dos eixos deve ser excluído, 0 ou ‘index será apagada a linha indicada; 1 ou ‘columns será apagada a coluna indicada
-
-### IMPORTANTE A base original, NÃO foi afetada
+- IMPORTANTE A base original, NÃO foi afetada
 
 ## 3- Tratamento e visão geral dos dados
 ### Limpando a base de dados 
-
-### trasformar colunas que deveria ser numero e esta como texto em numero 
-- Coluna que deverá ser transformada
+Analisando nossa base conseguimos perceber que temos 2 problemas
+- Dados faltantes na coluna Código
+- Coluna TotalCharges está classificada como OBJECT e por se tratar de números, deveriam ser classificadas como tal
 - Definição do que será feito em caso de erro
 ### Dica Sempre consulte a documentação de uma biblioteca ou método antes de utilizá la em um código 
-- tabela ["TotalGasto"] = pd.to_numeric(tabela["TotalGasto"] , errors="coerce"
+
+### trasformar colunas que deveria ser numero e esta como texto em numero 
+- tabela ["TotalCharges"] = pd.to_numeric(tabela["TotalCharges"] , errors="coerce"
 
 ![image](https://user-images.githubusercontent.com/82841749/123964311-ac560e80-d989-11eb-9ef8-b79d414a8463.png)
-### Coluna antes indicada como Object agora foi transformada para Float64
+ Coluna antes indicada como Object agora foi transformada para Float64
 
 - ["TotalGasto"] Indicação que após a conversão, a coluna que receberá os dados será a coluna TotalGasto
 - pd Indica o uso do Pandas
 - to_numeric permite a conversão de uma coluna para o tipo numérico
 - tabela["TotalCharges ”], Indica a coluna que será transformada
 - coerce, indica que em caso de erro, o valor a ser considerado na transformação será NaN
+
 ### Agora precisamos remover a coluna Código que apresentou apenas valores Vazios
  - tabela = df.dropna(how="all , axis=1
   
 ![image](https://user-images.githubusercontent.com/82841749/123965330-b6c4d800-d98a-11eb-83de-5ee2ca06f6d6.png)
-
-### Coluna ‘Código’ Removida
+ Coluna ‘Código’ Removida
+ 
 - Assim como no caso anterior, o método dropna possui 2 argumentos que precisam ser fornecidos para que a exclusão possa acontecer
 
 - How Indica quando uma linha ou coluna deve ser excluída Apenas com a presença de um dado do tipo NA ou apenas se toda a linha ou coluna apresentar esse tipo de dado
